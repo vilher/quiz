@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+        .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+        .w3-third img:hover{opacity: 1}
+    </style>
+</head>
+<footer class="w3-container w3-padding-32 w3-grey">
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <a href="/score"  class="w3-bar-item w3-button=" >FINISH</a>
+        </div>
+    </div>
+</footer>
+<body class="w3-light-grey w3-content" style="max-width:1600px" data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="">
+    <!-- Quiz section -->
+    <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+        <div class="w3-content" style="max-width:600px">
+            <h4 class="w3-center"><b>Quizes</b></h4>
+            <img src="<%=List[Correct].imgUrl%>" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+            <h4><b>Check correct answer</b></h4>
+            <form action="/check" method="POST">
+                <div class="w3-section">
+                    <button type = "submit" id="0" onclick="if(<%=Correct%>==0){this.style.background='green'} else{this.style.background='red'} clicked() " name="click" value="<%=List[0].filmName%>" class="w3-button w3-hover-pink w3-large w3-round w3-border link"><%=List[0].filmName%> </button>
+                </div>
+                <div class="w3-section">
+                    <button type = "submit"id="1" onclick="if(<%=Correct%>==1){this.style.background='green'}else{this.style.background='red'} clicked()" name="click" value="<%=List[1].filmName%>" class="w3-button w3-hover-pink w3-large w3-round w3-border link"><%=List[1].filmName%></button>
+                <div class="w3-section">
+                    <button type = "submit" id="2" onclick="if(<%=Correct%>==2){this.style.background='green'}else{this.style.background='red'} clicked()" name="click" value="<%=List[2].filmName%>" class="w3-button w3-hover-pink w3-large w3-round w3-border link"><%=List[2].filmName%></button>
+                </div>
+                    <div class="w3-section">
+                        <button type = "submit" id="3" onclick="if(<%=Correct%>==3){this.style.background='green'}else{this.style.background='red'} clicked()" name="click" value="<%=List[3].filmName%>" class="w3-button w3-hover-pink w3-large w3-round w3-border link"><%=List[3].filmName%></button>
+                    </div>
+                    </form>
+        </div>
+    </div>
+</div>
+<script>
+function clicked(){
+
+  document.getElementById("0").style.pointerEvents = "none";
+  document.getElementById("1").style.pointerEvents = "none";
+  document.getElementById("2").style.pointerEvents = "none";
+  document.getElementById("3").style.pointerEvents = "none";
+  }
+</script>
+<div class="w3-center">
+                        <a href="/next" class="w3-button w3-large w3-round w3-border link">NEXT</a>
+                    </div>
+</body>
+</html>
